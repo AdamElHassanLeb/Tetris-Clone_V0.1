@@ -1,0 +1,30 @@
+NOTES TO USE IN TERMINAL OR COMMAND PROMPT
+- compile a java file: javac Tv.java
+
+- compile a java file and put the class file in a different folder:javac -sourcepath src src/Tv.java -d classes
+
+- Execution of a program: java -classpath classes TvMain
+
+- More execution: java -classpath classes SomeClassWithMain valeur_1 valeur_2
+
+- Compilation of a junit: javac -classpath junit-console.jar:classes
+test/robot/BoxTest.java
+
+- Execution: java -jar junit-console.jar
+- classpath test:classes -select-class robot.BoxTest
+java -jar junit-console.jar
+- classpath test:classes -scan-classpath
+
+- Documentation paquetages et sous paquetages:
+javadoc -sourcepath src -subpackages vlille -d docs
+
+
+- Compilation of a java test: javac -classpath ".;junit-console.jar;classes" test\vlille\BikeTest.java
+
+- Execution of a test: java -jar junit-console.jar --class-path "test;classes" -select-class vlille.BikeTest
+
+- Creer un ficher JAR:jar cvf premierJar.jar -C classes tv -C classes io
+
+- Pour visualiser le contenu de l’archive, exécutez la commande :
+jar tvf premierJar.jar
+
